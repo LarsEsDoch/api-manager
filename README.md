@@ -59,11 +59,14 @@
 
 ```yaml
 database:
-  host: "127.0.0.1"        # IP or hostname of your MariaDB server
-  port: 3306               # Default MariaDB/MySQL port
-  database: "my_database"  # Name of the schema/database
-  username: "my_user"      # Database user
-  password: "my_password"  # Database password
+  host: "Enter the IP of your database"          # IP or hostname of your database server
+  port: 3306                 # Default MySQL port
+  database: "Enter the name of the database"        # Name of the database (schema)
+  username: "Enter the database user"           # Database user
+  password: "Enter the password of the user"    # User password
+
+server:
+  id: "Enter the server ID"   # unique per server, e.g. "lobby", "survival"
 ```
 
 If any value is left as a placeholder (or the host is unreachable), the plugin will start in **safe mode** and log a warning to the console. No plugin that depends on ApiManager will crash — all API calls will silently no-op.
